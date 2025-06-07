@@ -1,4 +1,17 @@
-# 2025-R-Medicine_targets-workshop
+# The power of `{targets}` for reproducible data science
+
+[_2025 R/Medicine Conference_](https://rconsortium.github.io/RMedicine_website/)
+
+## Description
+
+Reproducibility is a cornerstone of credible and robust data science. This talk delves into the powerful targets package showcasing how it streamlines and enhances reproducibility in data science workflows. The targets package in R provides a comprehensive framework for pipeline management, enabling eﬃcient dependency tracking, automated pipeline execution, and clear documentation of the entire data analysis process. It ensures execution of complex pipelines in consistent and isolated environments.
+
+Combined with tools like {renv} and docker, this approach eliminates the it works on my machine problem. Through real-world examples, attendees will learn how to leverage these tools to create reproducible, scalable, and maintainable data science projects, ensuring that their analyses can be reliably replicated and shared across diverse computational environments.
+
+This workshop is designed for data scientists and analysts who are looking to enhance their ability to manage and scale up their analytical pipelines. By the end of the session, attendees will have a deeper understanding of the targets package, it’s capabilities and how to apply this package to their workflows, from exploration, to model building, to plotting and report generation.
+
+
+## Agenda
 
 
 | Time       | Segment                              | Duration | Description                                                      |
