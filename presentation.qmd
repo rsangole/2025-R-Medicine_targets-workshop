@@ -138,6 +138,16 @@ _{targets} released in ~2021 is a successor to {drake}_
 <!-- _Ref: https://arrow.apache.org/docs/r/index.html_ -->
 <!-- ::: -->
 
+# /{targets}/what-we'll-cover
+
+what we'll cover...
+
+
+
+what I won't cover...
+
+
+
 # lets::code()
 
 ## /caveats

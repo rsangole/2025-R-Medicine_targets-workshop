@@ -110,5 +110,12 @@
     "title": "Reproducible Data Science using {targets}",
     "section": "/further reading",
     "text": "/further reading\n\n\n\n\n\n\nThe user manual\n\n\n\n\n\n\nThe documentation"
+  },
+  {
+    "objectID": "code/04-quarto/report.html",
+    "href": "code/04-quarto/report.html",
+    "title": "Model Report",
+    "section": "",
+    "text": "print(params$tbl_coeff)\n\n$term\n[1] \"(Intercept)\" \"bp_sys_ave\"  \"gendermale\"  \"age\"        \n\n$estimate\n[1] 38.8089157  0.3186095  1.7446862 -0.1598256\n\n$std.error\n[1] 0.9794806 0.0088933 0.2730798 0.0088956\n\n$statistic\n[1]  39.621934  35.825784   6.388925 -17.966784\n\n$p.value\n[1] 2.824923e-305 5.807643e-255  1.795767e-10  2.382937e-70"
   }
 ]

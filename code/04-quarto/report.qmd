@@ -1,0 +1,33 @@
+---
+title: "Model Report"
+format: html
+params:
+  tbl_coeff: "default_value"
+  mod_lm: "default_value"
+---
+
+```{r}
+library(ggplot2)
+library(gt)
+```
+
+```{r}
+params$tbl_coeff |> 
+  ggplot(
+    aes(x = estimate,
+        y = term)
+  ) +
+  geom_point() +
+  geom_segment(
+    aes(
+      x = estimate-3*`std.error`,
+      xend=estimate+3*`std.error`,
+      y=term,
+      yend=term)) +
+  theme_bw()
+```
+
+
+<!-- ```{r} -->
+<!-- gt(params$tbl_coeff) -->
+<!-- ``` -->

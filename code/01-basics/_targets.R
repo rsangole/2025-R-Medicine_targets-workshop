@@ -7,6 +7,7 @@ library(plotly)
 library(NHANES)
 
 list(
+  # Full dataset
   tar_target(
     tbl_NHANES_subset,
     NHANES |>
