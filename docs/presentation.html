@@ -11,7 +11,7 @@
 
   <meta name="author" content="Rahul S">
   <meta name="dcterms.date" content="2025-06-09">
-  <title>Reproducible Data Science, unlocked using {targets}</title>
+  <title>Reproducible Data Science using {targets}</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,72 +29,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-a02e9b242f1deefb7c93cbcdb2a0585f.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -195,7 +129,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Reproducible Data Science, unlocked using {targets}</h1>
+  <h1 class="title">Reproducible Data Science using {targets}</h1>
   <p class="subtitle">2025 R/Medicine Conference</p>
 
 <div class="quarto-title-authors">
@@ -208,30 +142,171 @@ Rahul S
 
   <p class="date">2025-06-09</p>
 </section>
-<section id="quarto" class="slide level2">
-<h2>Quarto</h2>
-<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
-</section>
-<section id="bullets" class="slide level2">
-<h2>Bullets</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
+<section id="setup" class="slide level2">
+<h2>/setup</h2>
+<p><br></p>
 <ul>
-<li>Content authored with markdown</li>
-<li>Output from executable code</li>
+<li>Clone github repo:</li>
+<li>If you don’t have <code>{renv}</code> installed, run <code>install.packages("renv")</code></li>
+<li>Run <code>renv::restore()</code></li>
 </ul>
 </section>
-<section id="code" class="slide level2">
-<h2>Code</h2>
-<p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<section id="agenda" class="slide level2">
+<h2>/agenda</h2>
+</section>
+<section id="engagement" class="slide level2">
+<h2>/engagement</h2>
+<p><br></p>
+<ul>
+<li>Feel free to ask questions along the way</li>
+<li>You don’t <em>have</em> to code along
+<ul>
+<li>More important to absorb the fundamentals and design patterns</li>
+<li>Code bases are fully reproducible &amp; available in GitHub</li>
+</ul></li>
+</ul>
+</section>
+<section id="whoami" class="slide level2">
+<h2>/whoami</h2>
+<p><br></p>
+<ul>
+<li>‘Full Stack’ Data Science Manager, Mechanical Engineer</li>
+<li>Focus areas
+<ul>
+<li>Time Series</li>
+<li>Scalable Solutioning</li>
+<li>Reproducible data science</li>
+<li>ML Ops</li>
+</ul></li>
+<li>R, Py Package Author</li>
+</ul>
+<div class="footer">
+<p>github: <code>rsangole</code></p>
 </div>
+</section>
+<section id="motivationreproducibility-crisis" class="slide level2">
+<h2>/motivation/reproducibility-crisis</h2>
+
+<img data-src="images/repro-1.jpeg" class="r-stretch"></section>
+<section id="motivationreproducibility-crisis-1" class="slide level2">
+<h2>/motivation/reproducibility-crisis</h2>
+
+<img data-src="images/repro-2.png" class="r-stretch"></section>
+<section id="motivationreproducibility-crisis-2" class="slide level2">
+<h2>/motivation/reproducibility-crisis</h2>
+
+<img data-src="images/repro-3.png" class="r-stretch"></section>
+<section id="motivationreproducibility-crisis-3" class="slide level2">
+<h2>/motivation/reproducibility-crisis</h2>
+
+<img data-src="images/repro-4.jpeg" class="r-stretch"></section>
+<section id="motivationcode-time-complexity" class="slide level2">
+<h2>/motivation/code-time-complexity</h2>
+</section>
+<section id="reproduciblity" class="slide level2">
+<h2>/reproduciblity</h2>
+<p>How do we ensure end to end reproducibility?</p>
+</section>
+<section id="targetswhat-is-it" class="slide level2">
+<h2>/{targets}/what-is-it?</h2>
+<p><br></p>
+<p>Author Will Landaeu defines <code>{targets}</code> as:</p>
+<ul>
+<li>Pipeline tools coordinate the pieces of computationally demanding analysis projects</li>
+<li>Is a Make-like pipeline tool in R</li>
+<li>The package skips costly runtime for tasks that are already up to date</li>
+<li>It orchestrates computation, handles parallel computing</li>
+<li>If all the current output matches the code and data, then the whole pipeline is up to date, and the results are more trustworthy</li>
+</ul>
+
+<aside><div>
+<p><em>{targets} released in ~2021 is a successor to {drake}</em></p>
+</div></aside></section>
+<section id="targetswhat-is-it-1" class="slide level2">
+<h2>/{targets}/what-is-it?</h2>
+<!-- ## /arrow/R package -->
+<!-- > The arrow R package exposes an interface to the Arrow C++ library, enabling access to many of its features in R -->
+<!-- ::: columns -->
+<!-- ::: {.column width="50%"} -->
+<!-- **Read and write** -->
+<!-- - Parquet files, an efficient and widely used columnar format -->
+<!-- - CSV files with excellent speed and efficiency -->
+<!-- - Multi-file and larger-than-memory datasets -->
+<!-- - Read JSON files -->
+<!-- ::: -->
+<!-- ::: {.column width="50%"} -->
+<!-- **Data analysis** -->
+<!-- - Analyze larger-than-memory datasets -->
+<!-- - Manipulate Arrow data with dplyr verbs -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- :::aside -->
+<!-- _Ref: https://arrow.apache.org/docs/r/index.html_ -->
+<!-- ::: -->
+</section>
+<section>
+<section id="letscode" class="title-slide slide level1 center">
+<h1>lets::code()</h1>
+
+</section>
+<section id="caveats" class="slide level2">
+<h2>/caveats</h2>
+<p><br></p>
+<ul>
+<li class="fragment">I’m assuming you know R</li>
+<li class="fragment">You know how to work with RStudio</li>
+<li class="fragment">You know install packages</li>
+<li class="fragment">You’re familiar with the <code>tidyverse</code></li>
+</ul>
+<section id="recap" class="slide level2">
+<h2>/recap</h2>
+<p><br></p>
+<ul>
+<li class="fragment"><code>arrow</code> evaluates lazily by default</li>
+<li class="fragment">execution only runs on <code>collect()</code></li>
+<li class="fragment"><code>{dplyr}</code> verbs, <code>filter</code>, <code>select</code>, <code>mutate</code>, <code>join</code>, <code>distinct</code>, <code>group_by</code> + <code>summarize</code>, and <code>across</code></li>
+<li class="fragment"><code>to_duckdb()</code> saves the day for pivoting and window functions</li>
+<li class="fragment"><code>register_scalar_function</code> can be used to create UDFs</li>
+<li class="fragment">massive performance gains using parquet files and smart partitioning</li>
+</ul>
+</section>
+<section id="i-hope" class="slide level2">
+<h2>/i hope</h2>
+<p><br></p>
+
+<img data-src="images/85177c.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="further-reading" class="slide level2">
+<h2>/further reading</h2>
+<!-- ::: {layout-ncol=2} -->
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/targets-manual.png"></p>
+<figcaption>The user manual</figcaption>
+</figure>
 </div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/targets-docs.png"></p>
+<figcaption>The documentation</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="cheers" class="title-slide slide level1 center">
+<h1>Cheers</h1>
+<p><br></p>
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-github" viewbox="0 0 16 16">
+<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path> </svg><code>rsangole/2025-R-Medicine_targets-workshop</code>
+
+<p><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin" viewbox="0 0 16 16"> <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path> </svg><code>rahulsangole</code> </p>
 
 
 </section>
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -447,44 +522,6 @@ Rahul S
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
