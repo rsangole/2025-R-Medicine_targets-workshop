@@ -53,7 +53,7 @@ plot_ly(
   y = ~bp_sys_ave,
   color = ~diabetes,
   alpha = 0.4
-) |> 
+) |>
   add_markers()
 
 plot_ly(
@@ -61,14 +61,14 @@ plot_ly(
   x = ~bmi,
   y = ~diabetes,
   color = ~gender
-) |> 
+) |>
   add_bars()
 
 
 # Model
-tbl_2 <- tbl_clean |> 
-  filter(bp_dia_ave>0, bp_sys_ave>0)
+tbl_2 <- tbl_clean |>
+  filter(bp_dia_ave > 0, bp_sys_ave > 0)
 
-mod_lm <- lm(bp_dia_ave~bp_sys_ave+gender+age, tbl_2)
+mod_lm <- lm(bp_dia_ave ~ bp_sys_ave + gender + age, tbl_2)
 summary(mod_lm)
 plot(mod_lm)

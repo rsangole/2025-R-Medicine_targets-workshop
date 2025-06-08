@@ -11,6 +11,11 @@ The targets package in R provides a comprehensive framework for pipeline managem
 This workshop is designed for data scientists and analysts who are looking to enhance their ability to manage and scale up their analytical pipelines. By the end of the session, attendees will have a deeper understanding of the targets package, it’s capabilities and how to apply this package to their workflows, from exploration, to model building, to plotting and report generation.
 
 
+brew install mbedtls
+brew install cmake
+
+
+
 ## Sequence
 
 Fundamentals
@@ -22,7 +27,9 @@ Fundamentals
 Advanced
 4. parallel computing
 5. dynamic branching
-6. full-stack motivational example
+6. databases
+
+
 
 
 ## Agenda
