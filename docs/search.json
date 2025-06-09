@@ -95,21 +95,21 @@
     "href": "presentation.html#recap",
     "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/recap",
-    "text": "/recap"
+    "text": "/recap\n\nWe learned:\n\nWhat {targets} is and why reproducibility matters\n\nHow to build and modularize pipelines\n\nManaging files, Quarto reports, and databases\n\nUsing parallel computing and dynamic branching\n\nBringing it all together in a full example"
   },
   {
     "objectID": "presentation.html#i-hope",
     "href": "presentation.html#i-hope",
     "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/i hope",
-    "text": "/i hope"
+    "text": "/i hope\n\n\n\nThe joy of a reproducible {targets} pipeline!"
   },
   {
     "objectID": "presentation.html#further-reading",
     "href": "presentation.html#further-reading",
     "title": "The 💪 of {targets} for  Reproducible Data Science",
-    "section": "/further reading",
-    "text": "/further reading\n\n\n\n\n\n\nThe user manual\n\n\n\n\n\n\nThe documentation\n\n\n\n\n\nHandling packages, advanced tarchetypes, cloud storage, remote distributed computation, performance testing & profiling, & much more…"
+    "section": "/further-reading",
+    "text": "/further-reading\nWe just scratched the surface…\n\n\n\n\n\nThe user manual\n\n\n\n\n\n\nThe documentation\n\n\n\n\n\nHandling packages, advanced tarchetypes, cloud storage, remote distributed computation, performance testing & profiling, & much more…"
   },
   {
     "objectID": "code/04-quarto/report.html",
@@ -158,7 +158,7 @@
     "href": "presentation.html#targetswhat-is-it-2",
     "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/{targets}/what-is-it?",
-    "text": "/{targets}/what-is-it?\nto here…"
+    "text": "/{targets}/what-is-it?\nTo here…"
   },
   {
     "objectID": "presentation.html#workshop-sequence",
@@ -180,5 +180,26 @@
     "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/lets::code()",
     "text": "/lets::code()\n/caveats\n\n\nI’m assuming you know R\nYou know how to work with RStudio\nYou know install packages\nYou’re familiar with the tidyverse"
+  },
+  {
+    "objectID": "presentation.html#i-hope-1",
+    "href": "presentation.html#i-hope-1",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
+    "section": "/i hope",
+    "text": "/i hope\n\n\nYou leave with a clear understanding of how {targets} can make your data science work more reproducible and efficient.\nYou feel confident building and scaling your own analytical pipelines.\nYou see how modular code, automation, and good workflow design can save you time and headaches.\nYou’re inspired to bring these best practices to your own projects and teams.\nYou know where to find resources and community support as you continue your journey!"
+  },
+  {
+    "objectID": "presentation.html#joy",
+    "href": "presentation.html#joy",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
+    "section": "/joy!",
+    "text": "/joy!\n\n\n\nThe joy of a reproducible {targets} pipeline!"
+  },
+  {
+    "objectID": "presentation.html#lets-make-data-science-reproducible",
+    "href": "presentation.html#lets-make-data-science-reproducible",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
+    "section": "/lets-make-data-science-reproducible!",
+    "text": "/lets-make-data-science-reproducible!"
   }
 ]

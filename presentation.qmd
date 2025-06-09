@@ -116,13 +116,6 @@ A 2019 paper found just 24% of 800k Jupyter notebooks on GitHub could be rerun, 
 A 2024 study on code reproducibility in economics. attempted to reproduce 67 economics papers and found that only about 50% were reproducible, even with author assistance and mandatory code-sharing policies at journals!
 :::
 
-
-<!-- ## /motivation/code-complexity -->
-
-
-
-
-
 ## /reproducability
 
 How do we define end to end reproducibility?
@@ -168,12 +161,13 @@ Author Will Landau explains...
 
 It'll help you go from here...
 
-
+![](images/from.jpg)
 
 ## /{targets}/what-is-it?
 
-to here...
+To here...
 
+![](images/to.png){fig-align='center'}
 
 
 ## /{targets}/what-we'll-cover
@@ -210,17 +204,19 @@ The workshop is structured to build your skills step-by-step, from foundational 
 
 ::: incremental
 
+**We learned:**  
+
+  - What `{targets}` is and why reproducibility matters  
+  - How to build and modularize pipelines  
+  - Managing files, Quarto reports, and databases  
+  - Using parallel computing and dynamic branching  
+  - Bringing it all together in a full example
 :::
 
-## /i hope
+## /further-reading
 
-<br>
 
-![](images/85177c.jpg){fig-align="center"}
-
-## /further reading
-
-<!-- ::: {layout-ncol=2} -->
+_We just scratched the surface..._
 
 ::::: columns
 ::: {.column width="50%"}
@@ -236,6 +232,14 @@ The workshop is structured to build your skills step-by-step, from foundational 
 :::{.aside}
 _Handling packages, advanced tarchetypes, cloud storage, remote distributed computation, performance testing & profiling, & much more..._
 :::
+
+
+## /lets-make-data-science-reproducible!
+
+<br>
+
+![](images/ihope.png){fig-align='center' height=500}
+
 
 # 🙏
 
