@@ -118,7 +118,7 @@ A 2024 study on code reproducibility in economics attempted to reproduce 67 econ
 
 ## /reproducibility
 
-How do we define end to end reproducibility?
+How do we _define_ end to end reproducibility?
 
 <br><br>
 
@@ -126,7 +126,7 @@ _Given a set of inputs, we expect stable, identical outputs_
 
 ## /reproducibility
 
-How do we define end to end reproducibility?
+How do we _ensure_ end to end reproducibility?
 
 ```{mermaid}
 mindmap

@@ -221,6 +221,6 @@
     "href": "presentation.html#reproducibility-1",
     "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/reproducibility",
-    "text": "/reproducibility\nHow do we define end to end reproducibility?\n\n\n\n\n\nmindmap\n  root)Reproducibility(\n    3-Code\n      [Version]\n        [Github]\n      [Execution]\n        ))targets((\n    2-Environment\n      🐳 [Docker]\n        [OS]\n        [Libraries]\n        [Environment]\n        [R Packages]\n        [Py Packages]\n    1-Data\n      [Databases]\n      [Blob storage]\n      [Archives]"
+    "text": "/reproducibility\nHow do we ensure end to end reproducibility?\n\n\n\n\n\nmindmap\n  root)Reproducibility(\n    3-Code\n      [Version]\n        [Github]\n      [Execution]\n        ))targets((\n    2-Environment\n      🐳 [Docker]\n        [OS]\n        [Libraries]\n        [Environment]\n        [R Packages]\n        [Py Packages]\n    1-Data\n      [Databases]\n      [Blob storage]\n      [Archives]"
   }
 ]
