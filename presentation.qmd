@@ -113,10 +113,18 @@ A 2019 paper found just 24% of 800k Jupyter notebooks on GitHub could be rerun, 
 ![](images/repro-4.png){fig-align='center' height=400}
 
 ::: {.callout-important title="Say it isn't so! 🤯"}
-A 2024 study on code reproducibility in economics. attempted to reproduce 67 economics papers and found that only about 50% were reproducible, even with author assistance and mandatory code-sharing policies at journals!
+A 2024 study on code reproducibility in economics attempted to reproduce 67 economics papers and found that only about 50% were reproducible, even with author assistance and mandatory code-sharing policies at journals!
 :::
 
-## /reproducability
+## /reproducibility
+
+How do we define end to end reproducibility?
+
+<br><br>
+
+_Given a set of inputs, we expect stable, identical outputs_
+
+## /reproducibility
 
 How do we define end to end reproducibility?
 
