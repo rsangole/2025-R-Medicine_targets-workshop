@@ -2,114 +2,114 @@
   {
     "objectID": "presentation.html#setup",
     "href": "presentation.html#setup",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/setup",
-    "text": "/setup\n\n\nClone github repo:\nIf you don’t have {renv} installed, run install.packages(\"renv\")\nRun renv::restore()"
+    "text": "/setup\n\n\nHave R & RStudio running\nClone github repo:\n\nhttps://tinyurl.com/r-targets-workshop\n\nIf you don’t have {renv}, run install.packages(\"renv\")\nRun renv::restore() to install the needed packages"
   },
   {
     "objectID": "presentation.html#agenda",
     "href": "presentation.html#agenda",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/agenda",
-    "text": "/agenda"
+    "text": "/agenda\n\n\n\n\n\n\n\n\n\n\n\nTime\nSegment\nDuration\nDescription\n\n\n\n\n0:00–0:15\nIntroduction & Setup\n15 min\nWelcome, objectives, environment check, intro to {targets}.\n\n\n0:15–0:35\n01-basics: Core Concepts Exercise\n20 min\nBuild your first {targets} pipeline.\n\n\n0:35–0:55\n02-functions: Modularization Exercise\n20 min\nWrite and source custom functions for your pipeline.\n\n\n0:55–1:05\nBreak\n10 min\nStretch, coffee, questions.\n\n\n1:05–1:25\n03-files: File I/O & Quarto Exercise\n20 min\nHandle file inputs/outputs and automate reporting.\n\n\n1:25–1:45\n04-parallel: Parallel Computing Exercise\n20 min\nSpeed up pipelines with parallel computing.\n\n\n1:45–1:55\nBreak\n10 min\nStretch, coffee, questions.\n\n\n1:55–2:10\n05-dynamic_branching: Dynamic Branching Ex.\n15 min\nProcess multiple groups/files efficiently.\n\n\n2:10–2:25\n06-database: Database Integration Exercise\n15 min\nIntegrate databases for robust data management.\n\n\n2:25–2:35\nBreak\n10 min\nStretch, coffee, questions.\n\n\n2:35–2:45\n07-full_example: Full Pipeline Exercise\n10 min\nBring together all concepts in a comprehensive example.\n\n\n2:45–3:00\nWrap-Up and Q&A\n15 min\nRecap, resources, open questions, next steps."
   },
   {
     "objectID": "presentation.html#engagement",
     "href": "presentation.html#engagement",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/engagement",
     "text": "/engagement\n\n\nFeel free to ask questions along the way\nYou don’t have to code along\n\nMore important to absorb the fundamentals and design patterns\nCode bases are fully reproducible & available in GitHub"
   },
   {
     "objectID": "presentation.html#whoami",
     "href": "presentation.html#whoami",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/whoami",
-    "text": "/whoami\n\n\n‘Full Stack’ Data Science Manager, Mechanical Engineer\nFocus areas\n\nTime Series\nScalable Solutioning\nReproducible data science\nML Ops\n\nR, Py Package Author\n\n\ngithub: rsangole"
+    "text": "/whoami\n\n\n‘Full Stack’ Data Science Manager, Mechanical Engineer\nFocus areas\n\nTime Series\nScalable Solutioning\nReproducible data science\nML Ops\n\nR, Py Package Author\ngithub: rsangole"
   },
   {
     "objectID": "presentation.html#motivationreproducibility-crisis",
     "href": "presentation.html#motivationreproducibility-crisis",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/motivation/reproducibility-crisis",
-    "text": "/motivation/reproducibility-crisis"
+    "text": "/motivation/reproducibility-crisis\n\n\n\n\n\n\n\n\n\n\n\n\nNot good 🙈\n\n\nA survey of 1,576 researchers found that over 70% had failed to reproduce another scientist’s experiments, and more than 50% couldn’t reproduce their own results!"
   },
   {
     "objectID": "presentation.html#motivationreproducibility-crisis-1",
     "href": "presentation.html#motivationreproducibility-crisis-1",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/motivation/reproducibility-crisis",
-    "text": "/motivation/reproducibility-crisis"
+    "text": "/motivation/reproducibility-crisis\n\n\n\n\n\n\n\n\n\n\n\n\nConcerning… 😩\n\n\nScientists tried replicating 56 studies. Only 19% found results consistent with the original papers"
   },
   {
     "objectID": "presentation.html#motivationreproducibility-crisis-2",
     "href": "presentation.html#motivationreproducibility-crisis-2",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/motivation/reproducibility-crisis",
-    "text": "/motivation/reproducibility-crisis"
+    "text": "/motivation/reproducibility-crisis\n\n\n\n\n\n\n\n\n\n\n\n\nGosh! ☠️\n\n\nA 2019 paper found just 24% of 800k Jupyter notebooks on GitHub could be rerun, and only 4% reproduced the same results!"
   },
   {
     "objectID": "presentation.html#motivationreproducibility-crisis-3",
     "href": "presentation.html#motivationreproducibility-crisis-3",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/motivation/reproducibility-crisis",
-    "text": "/motivation/reproducibility-crisis"
+    "text": "/motivation/reproducibility-crisis\n\n\n\n\n\n\n\n\n\n\n\n\nSay it isn’t so! 🤯\n\n\nA 2024 study on code reproducibility in economics. attempted to reproduce 67 economics papers and found that only about 50% were reproducible, even with author assistance and mandatory code-sharing policies at journals!"
   },
   {
     "objectID": "presentation.html#motivationcode-time-complexity",
     "href": "presentation.html#motivationcode-time-complexity",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/motivation/code-time-complexity",
     "text": "/motivation/code-time-complexity"
   },
   {
     "objectID": "presentation.html#reproduciblity",
     "href": "presentation.html#reproduciblity",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/reproduciblity",
-    "text": "/reproduciblity\nHow do we ensure end to end reproducibility?"
+    "text": "/reproduciblity\nHow do we define end to end reproducibility?\n\n\n\n\n\nmindmap\n  root)Reproducibility(\n    3-Code\n      [Version]\n        [Github]\n      [Execution]\n        ))targets((\n    2-Environment\n      🐳 [Docker]\n        [OS]\n        [Libraries]\n        [Environment]\n        [R Packages]\n        [Py Packages]\n    1-Data\n      [Databases]\n      [Blob storage]\n      [Archives]"
   },
   {
     "objectID": "presentation.html#targetswhat-is-it",
     "href": "presentation.html#targetswhat-is-it",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/{targets}/what-is-it?",
-    "text": "/{targets}/what-is-it?\n\nAuthor Will Landaeu defines {targets} as:\n\nPipeline tools coordinate the pieces of computationally demanding analysis projects\nIs a Make-like pipeline tool in R\nThe package skips costly runtime for tasks that are already up to date\nIt orchestrates computation, handles parallel computing\nIf all the current output matches the code and data, then the whole pipeline is up to date, and the results are more trustworthy\n\n\n\n{targets} released in ~2021 is a successor to {drake}"
+    "text": "/{targets}/what-is-it?\n\nAuthor Will Landau explains…\n\nA make-like pipeline tool that coordinates the pieces of computationally demanding analyses\nThe package skips costly run-time for tasks that are already up to date\nIt orchestrates computation, handles parallel computing\nIf all the current output matches the code and data, then the whole pipeline is up to date, and the results are more trustworthy\n\n\n\n{targets} released in ~2021 is a successor to {drake}"
   },
   {
     "objectID": "presentation.html#targetswhat-is-it-1",
     "href": "presentation.html#targetswhat-is-it-1",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/{targets}/what-is-it?",
-    "text": "/{targets}/what-is-it?"
+    "text": "/{targets}/what-is-it?\nIt’ll help you go from here…"
   },
   {
     "objectID": "presentation.html#caveats",
     "href": "presentation.html#caveats",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/caveats",
-    "text": "/caveats\n\n\nI’m assuming you know R\nYou know how to work with RStudio\nYou know install packages\nYou’re familiar with the tidyverse\n\n\n/recap\n\n\narrow evaluates lazily by default\nexecution only runs on collect()\n{dplyr} verbs, filter, select, mutate, join, distinct, group_by + summarize, and across\nto_duckdb() saves the day for pivoting and window functions\nregister_scalar_function can be used to create UDFs\nmassive performance gains using parquet files and smart partitioning\n\n\n\n/i hope\n\n\n\n\n/further reading\n\n\n\n\n\n\nThe user manual\n\n\n\n\n\n\nThe documentation\n\n\n\n\n\nCheers\n\n\n rsangole/2025-R-Medicine_targets-workshop\n\n  rahulsangole"
+    "text": "/caveats\n\n\nI’m assuming you know R\nYou know how to work with RStudio\nYou know install packages\nYou’re familiar with the tidyverse"
   },
   {
     "objectID": "presentation.html#recap",
     "href": "presentation.html#recap",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/recap",
-    "text": "/recap\n\n\narrow evaluates lazily by default\nexecution only runs on collect()\n{dplyr} verbs, filter, select, mutate, join, distinct, group_by + summarize, and across\nto_duckdb() saves the day for pivoting and window functions\nregister_scalar_function can be used to create UDFs\nmassive performance gains using parquet files and smart partitioning"
+    "text": "/recap"
   },
   {
     "objectID": "presentation.html#i-hope",
     "href": "presentation.html#i-hope",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/i hope",
     "text": "/i hope"
   },
   {
     "objectID": "presentation.html#further-reading",
     "href": "presentation.html#further-reading",
-    "title": "Reproducible Data Science using {targets}",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/further reading",
-    "text": "/further reading\n\n\n\n\n\n\nThe user manual\n\n\n\n\n\n\nThe documentation"
+    "text": "/further reading\n\n\n\n\n\n\nThe user manual\n\n\n\n\n\n\nThe documentation\n\n\n\n\n\nHandling packages, advanced tarchetypes, cloud storage, remote distributed computation, performance testing & profiling, & much more…"
   },
   {
     "objectID": "code/04-quarto/report.html",
@@ -117,5 +117,68 @@
     "title": "Model Report",
     "section": "",
     "text": "print(params$tbl_coeff)\n\n$term\n[1] \"(Intercept)\" \"bp_sys_ave\"  \"gendermale\"  \"age\"        \n\n$estimate\n[1] 38.8089157  0.3186095  1.7446862 -0.1598256\n\n$std.error\n[1] 0.9794806 0.0088933 0.2730798 0.0088956\n\n$statistic\n[1]  39.621934  35.825784   6.388925 -17.966784\n\n$p.value\n[1] 2.824923e-305 5.807643e-255  1.795767e-10  2.382937e-70"
+  },
+  {
+    "objectID": "presentation.html#motivationcode-complexity",
+    "href": "presentation.html#motivationcode-complexity",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
+    "section": "/motivation/code-complexity",
+    "text": "/motivation/code-complexity"
+  },
+  {
+    "objectID": "presentation.html#reproduciblity-1",
+    "href": "presentation.html#reproduciblity-1",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
+    "section": "/reproduciblity",
+    "text": "/reproduciblity\nHow do we ensure end to end reproducibility?\n\n\n\n\n\nmindmap\n  root((reproducibility))\n    Data\n      Databases\n      Blob storage\n    Code\n      Version\n        Github\n      Execution\n        {{targets}}\n    Environment\n      Packages\n        renv\n        venv\n      Docker\n        os\n        libraries\n        environment\n        packages"
+  },
+  {
+    "objectID": "presentation.html#reproduce-ablity",
+    "href": "presentation.html#reproduce-ablity",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
+    "section": "/reproduce-ablity",
+    "text": "/reproduce-ablity\nHow do we define end to end reproducibility?\n\n\n\n\n\nmindmap\n  root)Reproducibility(\n    3-Code\n      [Version]\n        [Github]\n      [Execution]\n        ))targets((\n    2-Environment\n      🐳 [Docker]\n        [OS]\n        [Libraries]\n        [Environment]\n        [R Packages]\n        [Py Packages]\n    1-Data\n      [Databases]\n      [Blob storage]\n      [Archives]"
+  },
+  {
+    "objectID": "presentation.html#reproduce-ability",
+    "href": "presentation.html#reproduce-ability",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
+    "section": "/reproduce-ability",
+    "text": "/reproduce-ability\nHow do we define end to end reproducibility?\n\n\n\n\n\nmindmap\n  root)Reproducibility(\n    3-Code\n      [Version]\n        [Github]\n      [Execution]\n        ))targets((\n    2-Environment\n      🐳 [Docker]\n        [OS]\n        [Libraries]\n        [Environment]\n        [R Packages]\n        [Py Packages]\n    1-Data\n      [Databases]\n      [Blob storage]\n      [Archives]"
+  },
+  {
+    "objectID": "presentation.html#reproducability",
+    "href": "presentation.html#reproducability",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
+    "section": "/reproducability",
+    "text": "/reproducability\nHow do we define end to end reproducibility?\n\n\n\n\n\nmindmap\n  root)Reproducibility(\n    3-Code\n      [Version]\n        [Github]\n      [Execution]\n        ))targets((\n    2-Environment\n      🐳 [Docker]\n        [OS]\n        [Libraries]\n        [Environment]\n        [R Packages]\n        [Py Packages]\n    1-Data\n      [Databases]\n      [Blob storage]\n      [Archives]"
+  },
+  {
+    "objectID": "presentation.html#targetswhat-is-it-2",
+    "href": "presentation.html#targetswhat-is-it-2",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
+    "section": "/{targets}/what-is-it?",
+    "text": "/{targets}/what-is-it?\nto here…"
+  },
+  {
+    "objectID": "presentation.html#workshop-sequence",
+    "href": "presentation.html#workshop-sequence",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
+    "section": "Workshop Sequence",
+    "text": "Workshop Sequence\nThe workshop is structured to build your skills step-by-step, from foundational concepts to advanced features:\nFundamentals\n\n01-basics\nGet started with the core concepts of {targets} and build your first pipeline.\n02-functions\nModularize your workflow by writing and sourcing custom functions for use in your pipeline.\n03-files\nHandle file inputs and outputs, and integrate Quarto documents for automated reporting.\n\nAdvanced Topics\n\n04-parallel\nAccelerate your pipelines by leveraging parallel computing for faster execution.\n05-dynamic_branching\nScale your analysis with dynamic branching to process multiple groups or files efficiently.\n06-database\nIntegrate databases into your workflow for robust and scalable data management.\n07-full_example\nA comprehensive example that brings together all previous concepts, including parameterized reporting and advanced workflow management.\n\nwhat we’ll cover…\nwhat I won’t cover…"
+  },
+  {
+    "objectID": "presentation.html#targetswhat-well-cover",
+    "href": "presentation.html#targetswhat-well-cover",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
+    "section": "/{targets}/what-we’ll-cover",
+    "text": "/{targets}/what-we’ll-cover\nThe workshop is structured to build your skills step-by-step, from foundational concepts to some advanced features:\n\nFundamentals\n\n01-basics Get started with the core concepts of {targets} and build your first pipeline.\n02-functions Modularize your workflow by writing and sourcing custom functions for use in your pipeline.\n03-files Handle file inputs and outputs, and integrate Quarto documents for automated reporting.\n\nAdvanced Topics\n\n04-parallel Accelerate your pipelines by leveraging parallel computing for faster execution.\n05-dynamic_branching Scale your analysis with dynamic branching to process multiple groups or files efficiently.\n06-database Integrate databases into your workflow for robust and scalable data management.\n07-full_example A comprehensive example that brings together all previous concepts, including parameterized reporting and advanced workflow management."
+  },
+  {
+    "objectID": "presentation.html#letscode",
+    "href": "presentation.html#letscode",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
+    "section": "/lets::code()",
+    "text": "/lets::code()\n/caveats\n\n\nI’m assuming you know R\nYou know how to work with RStudio\nYou know install packages\nYou’re familiar with the tidyverse"
   }
 ]

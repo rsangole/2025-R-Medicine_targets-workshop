@@ -1,10 +1,9 @@
 ---
-title: "Reproducible Data Science using {targets}"
+title: "The 💪 of `{targets}` for <br> Reproducible Data Science"
 subtitle: "2025 R/Medicine Conference"
 author: "Rahul S"
-date: "Jun 9, 2025"
 editor: visual
-footer: "Rahul S | 2025 R/Medicine | Jun 2025"
+footer: "Rahul S | 2025 R/Medicine | 9 Jun 2025 | https://tinyurl.com/r-targets-workshop"
 progress: true
 menu: false
 format: 
@@ -18,29 +17,59 @@ format:
         toc-title: "/agenda"
         code-line-numbers: true
         toc: false
-        echo: true
+        echo: false
         fig-align: 'center'
+        mermaid:
+            theme: default 
 ---
 
 ## /setup
 
 <br>
 
-- Clone github repo: 
-- If you don't have `{renv}` installed, run `install.packages("renv")`
-- Run `renv::restore()`
+- Have R & RStudio running
+- Clone github repo:
+    * [https://tinyurl.com/r-targets-workshop](https://tinyurl.com/r-targets-workshop)
+-   If you don't have `{renv}`, run `install.packages("renv")`
+-   Run `renv::restore()` to install the needed packages
+
+<br>
+
+![](images/qrcode.png){fig-align='center'}
+
+<br>
 
 ## /agenda
 
+<br>
+
+<div class="agenda-table">
+
+| Time       | Segment                                      | Duration | Description                                                      |
+|------------|----------------------------------------------|----------|------------------------------------------------------------------|
+| 0:00–0:15  | Introduction & Setup                         | 15 min   | Welcome, objectives, environment check, intro to `{targets}`.    |
+| 0:15–0:35  | 01-basics: Core Concepts Exercise            | 20 min   | Build your first `{targets}` pipeline.                           |
+| 0:35–0:55  | 02-functions: Modularization Exercise        | 20 min   | Write and source custom functions for your pipeline.             |
+| 0:55–1:05  | **Break**                                    | 10 min   | Stretch, coffee, questions.                                      |
+| 1:05–1:25  | 03-files: File I/O & Quarto Exercise         | 20 min   | Handle file inputs/outputs and automate reporting.               |
+| 1:25–1:45  | 04-parallel: Parallel Computing Exercise     | 20 min   | Speed up pipelines with parallel computing.                      |
+| 1:45–1:55  | **Break**                                    | 10 min   | Stretch, coffee, questions.                                      |
+| 1:55–2:10  | 05-dynamic_branching: Dynamic Branching Ex.  | 15 min   | Process multiple groups/files efficiently.                       |
+| 2:10–2:25  | 06-database: Database Integration Exercise   | 15 min   | Integrate databases for robust data management.                  |
+| 2:25–2:35  | **Break**                                    | 10 min   | Stretch, coffee, questions.                                      |
+| 2:35–2:45  | 07-full_example: Full Pipeline Exercise      | 10 min   | Bring together all concepts in a comprehensive example.          |
+| 2:45–3:00  | Wrap-Up and Q&A                              | 15 min   | Recap, resources, open questions, next steps.                    |
+
+</div>
 
 ## /engagement
 
 <br>
 
-- Feel free to ask questions along the way
-- You don’t _have_ to code along
-    - More important to absorb the fundamentals and design patterns
-    - Code bases are fully reproducible & available in GitHub
+-   Feel free to ask questions along the way
+-   You don’t *have* to code along
+    -   More important to absorb the fundamentals and design patterns
+    -   Code bases are fully reproducible & available in GitHub
 
 ## /whoami
 
@@ -48,132 +77,138 @@ format:
 
 -   'Full Stack' Data Science Manager, Mechanical Engineer
 -   Focus areas
-    - Time Series
-    - Scalable Solutioning
-    - Reproducible data science
-    - ML Ops
+    -   Time Series
+    -   Scalable Solutioning
+    -   Reproducible data science
+    -   ML Ops
 -   R, Py Package Author
+-   github: `rsangole`
 
-:::footer
-github: `rsangole`
+## /motivation/reproducibility-crisis
+
+![](images/repro-1.png){fig-align='center' height=400}
+
+::: {.callout-important title="Not good 🙈"}
+A survey of 1,576 researchers found that over 70% had failed to reproduce another scientist’s experiments, and more than 50% couldn’t reproduce their own results!
 :::
 
 ## /motivation/reproducibility-crisis
 
-![](images/repro-1.jpeg)
+![](images/repro-2.png){fig-align='center' height=400}
 
-
-## /motivation/reproducibility-crisis
-
-![](images/repro-2.png)
-
-## /motivation/reproducibility-crisis
-
-![](images/repro-3.png)
-
+::: {.callout-important title="Concerning... 😩"}
+Scientists tried replicating 56 studies. Only 19% found results consistent with the original papers
+:::
 
 ## /motivation/reproducibility-crisis
 
-![](images/repro-4.jpeg)
+![](images/repro-3.png){fig-align='center' height=300}
+
+::: {.callout-important title="Gosh! ☠️"}
+A 2019 paper found just 24% of 800k Jupyter notebooks on GitHub could be rerun, and only 4% reproduced the same results!
+:::
+
+## /motivation/reproducibility-crisis
+
+![](images/repro-4.png){fig-align='center' height=400}
+
+::: {.callout-important title="Say it isn't so! 🤯"}
+A 2024 study on code reproducibility in economics. attempted to reproduce 67 economics papers and found that only about 50% were reproducible, even with author assistance and mandatory code-sharing policies at journals!
+:::
 
 
-## /motivation/code-time-complexity
+<!-- ## /motivation/code-complexity -->
 
 
 
 
 
-## /reproduciblity
+## /reproducability
 
-How do we ensure end to end reproducibility?
+How do we define end to end reproducibility?
 
-
-
+```{mermaid}
+mindmap
+  root)Reproducibility(
+    3-Code
+      [Version]
+        [Github]
+      [Execution]
+        ))targets((
+    2-Environment
+      🐳 [Docker]
+        [OS]
+        [Libraries]
+        [Environment]
+        [R Packages]
+        [Py Packages]
+    1-Data
+      [Databases]
+      [Blob storage]
+      [Archives]
+```
 
 
 ## /{targets}/what-is-it?
 
 <br>
 
-Author Will Landaeu defines `{targets}` as: 
+Author Will Landau explains...
 
-- Pipeline tools coordinate the pieces of computationally demanding analysis projects
-- Is a Make-like pipeline tool in R
-- The package skips costly runtime for tasks that are already up to date
-- It orchestrates computation, handles parallel computing
-- If all the current output matches the code and data, then the whole pipeline is up to date, and the results are more trustworthy
+-   A make-like pipeline tool that coordinates the pieces of computationally demanding analyses
+-   The package skips costly run-time for tasks that are already up to date
+-   It orchestrates computation, handles parallel computing
+-   If all the current output matches the code and data, then the whole pipeline is up to date, and the results are more trustworthy
 
-
-:::aside
-_{targets} released in ~2021 is a successor to {drake}_
+::: aside
+*`{targets}` released in \~2021 is a successor to `{drake}`*
 :::
 
 ## /{targets}/what-is-it?
 
-
-<!-- ## /arrow/R package -->
-
-<!-- > The arrow R package exposes an interface to the Arrow C++ library, enabling access to many of its features in R -->
-
-<!-- ::: columns -->
-<!-- ::: {.column width="50%"} -->
-<!-- **Read and write** -->
-
-<!-- - Parquet files, an efficient and widely used columnar format -->
-<!-- - CSV files with excellent speed and efficiency -->
-<!-- - Multi-file and larger-than-memory datasets -->
-<!-- - Read JSON files -->
-<!-- ::: -->
-
-<!-- ::: {.column width="50%"} -->
-<!-- **Data analysis** -->
-
-<!-- - Analyze larger-than-memory datasets -->
-<!-- - Manipulate Arrow data with dplyr verbs -->
-
-<!-- ::: -->
-<!-- ::: -->
-
-<!-- :::aside -->
-<!-- _Ref: https://arrow.apache.org/docs/r/index.html_ -->
-<!-- ::: -->
-
-# /{targets}/what-we'll-cover
-
-what we'll cover...
+It'll help you go from here...
 
 
 
-what I won't cover...
+## /{targets}/what-is-it?
+
+to here...
 
 
 
-# lets::code()
+## /{targets}/what-we'll-cover
 
-## /caveats
+The workshop is structured to build your skills step-by-step, from foundational concepts to _some_ advanced features:
 
-<br>
+<div class="agenda-workshop">
 
-:::{.incremental}
+### Fundamentals
 
-- I'm assuming you know R
-- You know how to work with RStudio
-- You know install packages
-- You're familiar with the `tidyverse`
+1. **01-basics**  *Get started with the core concepts of `{targets}` and build your first pipeline.*
 
+2. **02-functions**  *Modularize your workflow by writing and sourcing custom functions for use in your pipeline.*
+
+3. **03-files**   *Handle file inputs and outputs, and integrate Quarto documents for automated reporting.*
+
+### Advanced Topics
+
+4. **04-parallel** *Accelerate your pipelines by leveraging parallel computing for faster execution.*
+
+5. **05-dynamic_branching**   *Scale your analysis with dynamic branching to process multiple groups or files efficiently.*
+
+6. **06-database**   *Integrate databases into your workflow for robust and scalable data management.*
+
+7. **07-full_example**   *A comprehensive example that brings together all previous concepts, including parameterized reporting and advanced workflow management.*
+
+</div>
+
+# /lets::code()
 
 ## /recap
 
 <br>
 
-:::{.incremental}
-
-- `arrow` evaluates lazily by default
-- execution only runs on `collect()`
-- `{dplyr}` verbs, `filter`, `select`, `mutate`, `join`, `distinct`,  `group_by` + `summarize`, and `across`
-- `to_duckdb()` saves the day for pivoting and window functions
-- `register_scalar_function` can be used to create UDFs
-- massive performance gains using parquet files and smart partitioning
+::: incremental
 
 :::
 
@@ -181,34 +216,31 @@ what I won't cover...
 
 <br>
 
-![](images/85177c.jpg){fig-align='center'}
-
+![](images/85177c.jpg){fig-align="center"}
 
 ## /further reading
 
 <!-- ::: {layout-ncol=2} -->
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
-![The user manual](images/targets-manual.png){width=700, fig-align='center'}
-
-
+![The user manual](images/targets-manual.png){width="700," fig-align="center"}
 :::
 
 ::: {.column width="50%"}
-![The documentation](images/targets-docs.png){width=700, fig-align='center'}
-
+![The documentation](images/targets-docs.png){width="700," fig-align="center"}
 :::
 
+:::::
+
+:::{.aside}
+_Handling packages, advanced tarchetypes, cloud storage, remote distributed computation, performance testing & profiling, & much more..._
 :::
 
-
-# Cheers
+# 🙏
 
 <br>
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"> <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/> `rsangole` </svg>
+<br>
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"> <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/> `rahulsangole` </svg>
 
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>   `rsangole/2025-R-Medicine_targets-workshop`
-</svg> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>  `rahulsangole`
-</svg>
