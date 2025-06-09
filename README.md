@@ -21,19 +21,24 @@ The `{targets}` package provides a comprehensive framework for pipeline manageme
 - **Integrate** databases into your pipeline for robust data management.
 - **Visualize** and debug pipelines using built-in tools.
 
-## Agenda
+## Workshop Agenda
 
-| Time       | Segment                              | Duration | Description                                                      |
-|------------|--------------------------------------|----------|------------------------------------------------------------------|
-| 0:00–0:15  | Introduction & Setup                 | 15 min   | Overview, objectives, setup check (R, RStudio, packages).        |
-| 0:15–0:45  | Lecture: Reproducibility & {targets} | 30 min   | Why reproducibility matters; {targets} concepts (pipelines, dependencies). |
-| 0:45–1:15  | Live Demo: Basic {targets} Pipeline  | 30 min   | Build a simple pipeline with a clinical dataset.                 |
-| 1:15–1:25  | Break                                | 10 min   | Short stretch break.                                             |
-| 1:25–2:05  | Hands-On Exercise 1                  | 40 min   | Participants build a pipeline with provided dataset and code template. |
-| 2:05–2:35  | Lecture & Demo: Advanced Features    | 30 min   | Dynamic branching, parallel computing, error handling.           |
-| 2:35–2:45  | Break                                | 10 min   | Second break.                                                    |
-| 2:45–3:15  | Hands-On Exercise 2                  | 30 min   | Extend pipeline with advanced features (e.g., branching).        |
-| 3:15–3:30  | Wrap-Up & Q&A                        | 15 min   | Recap, share resources, answer questions, discuss next steps.    |
+
+| Time       | Segment                                      | Duration | Description                                                      |
+|------------|----------------------------------------------|----------|------------------------------------------------------------------|
+| 0:00–0:15  | Introduction & Setup                         | 15 min   | Welcome, objectives, environment check, intro to `{targets}`.    |
+| 0:15–0:35  | 01-basics: Core Concepts Exercise            | 20 min   | Build your first `{targets}` pipeline.                           |
+| 0:35–0:55  | 02-functions: Modularization Exercise        | 20 min   | Write and source custom functions for your pipeline.             |
+| 0:55–1:05  | **Break**                                    | 10 min   | Stretch, coffee, questions.                                      |
+| 1:05–1:25  | 03-files: File I/O & Quarto Exercise         | 20 min   | Handle file inputs/outputs and automate reporting.               |
+| 1:25–1:45  | 04-parallel: Parallel Computing Exercise     | 20 min   | Speed up pipelines with parallel computing.                      |
+| 1:45–1:55  | **Break**                                    | 10 min   | Stretch, coffee, questions.                                      |
+| 1:55–2:10  | 05-dynamic_branching: Dynamic Branching Ex.  | 15 min   | Process multiple groups/files efficiently.                       |
+| 2:10–2:25  | 06-database: Database Integration Exercise   | 15 min   | Integrate databases for robust data management.                  |
+| 2:25–2:35  | **Break**                                    | 10 min   | Stretch, coffee, questions.                                      |
+| 2:35–2:45  | 07-full_example: Full Pipeline Exercise      | 10 min   | Bring together all concepts in a comprehensive example.          |
+| 2:45–3:00  | Wrap-Up and Q&A                              | 15 min   | Recap, resources, open questions, next steps.                    |
+
 
 ## Setup Prerequisites
 
