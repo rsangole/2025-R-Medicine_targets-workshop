@@ -172,7 +172,7 @@
     "href": "presentation.html#targetswhat-well-cover",
     "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/{targets}/what-we’ll-cover",
-    "text": "/{targets}/what-we’ll-cover\nThe workshop is structured to build your skills step-by-step, from foundational concepts to some advanced features:\n\nFundamentals\n\n01-basics Get started with the core concepts of {targets} and build your first pipeline.\n02-functions Modularize your workflow by writing and sourcing custom functions for use in your pipeline.\n03-files Handle file inputs and outputs, and integrate Quarto documents for automated reporting.\n\nAdvanced Topics\n\n04-parallel Accelerate your pipelines by leveraging parallel computing for faster execution.\n05-dynamic_branching Scale your analysis with dynamic branching to process multiple groups or files efficiently.\n06-database Integrate databases into your workflow for robust and scalable data management.\n07-full_example A comprehensive example that brings together all previous concepts, including parameterized reporting and advanced workflow management."
+    "text": "/{targets}/what-we’ll-cover\n\nThe workshop is structured to build your skills step-by-step, from foundational concepts to some advanced features:\n\n\nFundamentals\n\n01-basics\n02-functions\n03-files\n\nAdvanced Topics\n\n04-parallel\n05-dynamic_branching\n06-database\n\n07-full_example"
   },
   {
     "objectID": "presentation.html#letscode",

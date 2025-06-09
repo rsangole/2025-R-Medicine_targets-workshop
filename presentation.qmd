@@ -172,28 +172,26 @@ To here...
 
 ## /{targets}/what-we'll-cover
 
+<br>
+
 The workshop is structured to build your skills step-by-step, from foundational concepts to _some_ advanced features:
+
+<br>
 
 <div class="agenda-workshop">
 
 ### Fundamentals
 
-1. **01-basics**  *Get started with the core concepts of `{targets}` and build your first pipeline.*
-
-2. **02-functions**  *Modularize your workflow by writing and sourcing custom functions for use in your pipeline.*
-
-3. **03-files**   *Handle file inputs and outputs, and integrate Quarto documents for automated reporting.*
+1. **01-basics** 
+2. **02-functions** 
+3. **03-files** 
 
 ### Advanced Topics
 
-4. **04-parallel** *Accelerate your pipelines by leveraging parallel computing for faster execution.*
-
-5. **05-dynamic_branching**   *Scale your analysis with dynamic branching to process multiple groups or files efficiently.*
-
-6. **06-database**   *Integrate databases into your workflow for robust and scalable data management.*
-
-7. **07-full_example**   *A comprehensive example that brings together all previous concepts, including parameterized reporting and advanced workflow management.*
-
+4. **04-parallel**
+5. **05-dynamic_branching** 
+6. **06-database**  
+7. **07-full_example** 
 </div>
 
 # /lets::code()
