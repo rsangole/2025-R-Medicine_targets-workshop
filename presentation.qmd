@@ -1,6 +1,6 @@
 ---
 title: "The 💪 of `{targets}` for <br> Reproducible Data Science"
-subtitle: "2025 R/Medicine Conference"
+subtitle: "<br>Get ready! <br>Setup instructions -->  https://tinyurl.com/r-targets-setup"
 author: "Rahul S"
 editor: visual
 footer: "Rahul S | 2025 R/Medicine | 9 Jun 2025 | https://tinyurl.com/r-targets-workshop"
