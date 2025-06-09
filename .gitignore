@@ -1,4 +1,5 @@
 **/_targets/
+**/solution.R
 
 # History files
 .Rhistory

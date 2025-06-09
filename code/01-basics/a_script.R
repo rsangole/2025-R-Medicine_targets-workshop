@@ -7,7 +7,7 @@ library(NHANES)
 
 glimpse(NHANES)
 
-# Subset
+# Data ----
 tbl_NHANES_subset <- NHANES |>
   select(
     ID,
@@ -27,26 +27,18 @@ tbl_NHANES_subset <- NHANES |>
   )
 tbl_NHANES_subset
 
-# Cleanup
+# Cleanup ----
 tbl_clean <- tbl_NHANES_subset |>
   janitor::clean_names() |>
   tidyr::drop_na()
 tbl_clean
 
-# Summaries
+# Summaries ----
 tbl_means <- tbl_clean |>
   summarise(across(where(is.numeric), mean), .by = c("gender", "diabetes"))
 tbl_means
 
-tbl_counts <- tbl_clean |>
-  summarise(
-    n = n(),
-    .by = c("gender", "education", "marital_status")
-  )
-tbl_counts
-
-
-# Graphs
+# Graphs ----
 plot_ly(
   tbl_clean,
   x = ~bp_dia_ave,
@@ -56,19 +48,9 @@ plot_ly(
 ) |>
   add_markers()
 
-plot_ly(
-  tbl_means,
-  x = ~bmi,
-  y = ~diabetes,
-  color = ~gender
-) |>
-  add_bars()
-
-
-# Model
+# Model ----
 tbl_2 <- tbl_clean |>
   filter(bp_dia_ave > 0, bp_sys_ave > 0)
 
 mod_lm <- lm(bp_dia_ave ~ bp_sys_ave + gender + age, tbl_2)
 summary(mod_lm)
-plot(mod_lm)

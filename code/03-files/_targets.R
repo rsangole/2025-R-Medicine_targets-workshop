@@ -1,8 +1,11 @@
+# Libraries ----
 library(targets)
 library(tarchetypes)
 
+# Source ----
 tar_source("functions.R")
 
+# Settings ----
 tar_option_set(
   format = "rds", # qs
   packages = c(
@@ -11,37 +14,40 @@ tar_option_set(
   )
 )
 
+# Targets ----
 list(
+  # * Input data ----
   tar_target(
+    # Target name
     local_file,
+    # Path
     "data/NHANES.csv",
+    # * This tells targets that this string is a file
     format = "file"
   ),
-
-  # Full dataset
   tar_target(
     tbl_NHANES,
     readr::read_csv(local_file)
   ),
 
-  # Subset
+  # * Subset ----
   tar_target(
     tbl_NHANES_subset,
     tbl_NHANES |>
       select(one_of(fn_cols()))
   ),
 
-  # Cleanup
+  # * Cleanup ----
   tar_target(
     tbl_clean,
     fn_clean(tbl_NHANES_subset)
   ),
 
-  # Model
+  # * Model ----
   tar_target(mod_lm, fn_lm_mod(tbl_clean)),
   tar_target(mod_lm_coeffs, broom::tidy(mod_lm)),
 
-  # Export
+  # * Export ----
   tar_target(
     export_mod_lm_coeffs,
     {
@@ -52,10 +58,10 @@ list(
 
       output_file
     },
-    format = "file"
+    format = "file" # This tells targets that this string is a file
   ),
 
-  # Report
+  # * Report ----
   tar_render(
     report,
     path = "report.qmd",
@@ -63,4 +69,7 @@ list(
       tbl_coeff = mod_lm_coeffs
     )
   )
+
+  # Exercise ----
+  # Your code here....
 )

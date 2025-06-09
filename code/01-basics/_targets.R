@@ -7,7 +7,7 @@ library(plotly)
 library(NHANES)
 
 list(
-  # Full dataset
+  # Full dataset ----
   tar_target(
     tbl_NHANES_subset,
     NHANES |>
@@ -30,7 +30,7 @@ list(
   ),
 
 
-  # Cleanup
+  # Cleanup ----
   tar_target(
     tbl_clean,
     tbl_NHANES_subset |>
@@ -40,21 +40,15 @@ list(
 
 
 
-  # Summaries
+  # Summaries ----
   tar_target(tbl_means, tbl_clean |>
     summarise(
       across(where(is.numeric), mean),
       .by = c("gender", "diabetes")
     )),
-  tar_target(tbl_counts, tbl_clean |>
-    summarise(
-      n = n(),
-      .by = c("gender", "education", "marital_status")
-    )),
 
 
-
-  # Graphs
+  # Graphs ----
   tar_target(
     plot_scatter,
     plot_ly(
@@ -66,19 +60,8 @@ list(
     ) |>
       add_markers()
   ),
-  tar_target(
-    plot_bar,
-    plot_ly(
-      tbl_means,
-      x = ~bmi,
-      y = ~diabetes,
-      color = ~gender
-    ) |>
-      add_bars()
-  ),
 
-
-  # Model
+  # Model ----
   tar_target(
     mod_lm,
     {
