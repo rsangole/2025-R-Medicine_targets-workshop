@@ -27,15 +27,15 @@ format:
 
 <br>
 
-- Have R & RStudio running
-- Clone github repo:
-    * [https://tinyurl.com/r-targets-workshop](https://tinyurl.com/r-targets-workshop)
+-   Have R & RStudio running
+-   Clone github repo:
+    -   <https://tinyurl.com/r-targets-workshop>
 -   If you don't have `{renv}`, run `install.packages("renv")`
 -   Run `renv::restore()` to install the needed packages
 
 <br>
 
-![](images/qrcode.png){fig-align='center'}
+![](images/qrcode.png){fig-align="center"}
 
 <br>
 
@@ -43,24 +43,22 @@ format:
 
 <br>
 
-<div class="agenda-table">
-
-| Time       | Segment                                      | Duration | Description                                                      |
-|------------|----------------------------------------------|----------|------------------------------------------------------------------|
-| 0:00–0:15  | Introduction & Setup                         | 15 min   | Welcome, objectives, environment check, intro to `{targets}`.    |
-| 0:15–0:35  | 01-basics: Core Concepts Exercise            | 20 min   | Build your first `{targets}` pipeline.                           |
-| 0:35–0:55  | 02-functions: Modularization Exercise        | 20 min   | Write and source custom functions for your pipeline.             |
-| 0:55–1:05  | **Break**                                    | 10 min   | Stretch, coffee, questions.                                      |
-| 1:05–1:25  | 03-files: File I/O & Quarto Exercise         | 20 min   | Handle file inputs/outputs and automate reporting.               |
-| 1:25–1:45  | 04-parallel: Parallel Computing Exercise     | 20 min   | Speed up pipelines with parallel computing.                      |
-| 1:45–1:55  | **Break**                                    | 10 min   | Stretch, coffee, questions.                                      |
-| 1:55–2:10  | 05-dynamic_branching: Dynamic Branching Ex.  | 15 min   | Process multiple groups/files efficiently.                       |
-| 2:10–2:25  | 06-database: Database Integration Exercise   | 15 min   | Integrate databases for robust data management.                  |
-| 2:25–2:35  | **Break**                                    | 10 min   | Stretch, coffee, questions.                                      |
-| 2:35–2:45  | 07-full_example: Full Pipeline Exercise      | 10 min   | Bring together all concepts in a comprehensive example.          |
-| 2:45–3:00  | Wrap-Up and Q&A                              | 15 min   | Recap, resources, open questions, next steps.                    |
-
-</div>
+::: agenda-table
+| Time | Segment | Duration | Description |
+|------------------|------------------|------------------|------------------|
+| 0:00–0:15 | Introduction & Setup | 15 min | Welcome, objectives, environment check, intro to `{targets}`. |
+| 0:15–0:35 | 01-basics: Core Concepts Exercise | 20 min | Build your first `{targets}` pipeline. |
+| 0:35–0:55 | 02-functions: Modularization Exercise | 20 min | Write and source custom functions for your pipeline. |
+| 0:55–1:05 | **Break** | 10 min | Stretch, coffee, questions. |
+| 1:05–1:25 | 03-files: File I/O & Quarto Exercise | 20 min | Handle file inputs/outputs and automate reporting. |
+| 1:25–1:45 | 04-parallel: Parallel Computing Exercise | 20 min | Speed up pipelines with parallel computing. |
+| 1:45–1:55 | **Break** | 10 min | Stretch, coffee, questions. |
+| 1:55–2:10 | 05-dynamic_branching: Dynamic Branching Ex. | 15 min | Process multiple groups/files efficiently. |
+| 2:10–2:25 | 06-database: Database Integration Exercise | 15 min | Integrate databases for robust data management. |
+| 2:25–2:35 | **Break** | 10 min | Stretch, coffee, questions. |
+| 2:35–2:45 | 07-full_example: Full Pipeline Exercise | 10 min | Bring together all concepts in a comprehensive example. |
+| 2:45–3:00 | Wrap-Up and Q&A | 15 min | Recap, resources, open questions, next steps. |
+:::
 
 ## /engagement
 
@@ -84,9 +82,10 @@ format:
 -   R, Py Package Author
 -   github: `rsangole`
 
+
 ## /motivation/reproducibility-crisis
 
-![](images/repro-1.png){fig-align='center' height=400}
+![](images/repro-1.png){fig-align="center" height="400"}
 
 ::: {.callout-important title="Not good 🙈"}
 A survey of 1,576 researchers found that over 70% had failed to reproduce another scientist’s experiments, and more than 50% couldn’t reproduce their own results!
@@ -94,7 +93,7 @@ A survey of 1,576 researchers found that over 70% had failed to reproduce anothe
 
 ## /motivation/reproducibility-crisis
 
-![](images/repro-2.png){fig-align='center' height=400}
+![](images/repro-2.png){fig-align="center" height="400"}
 
 ::: {.callout-important title="Concerning... 😩"}
 Scientists tried replicating 56 studies. Only 19% found results consistent with the original papers
@@ -102,7 +101,7 @@ Scientists tried replicating 56 studies. Only 19% found results consistent with 
 
 ## /motivation/reproducibility-crisis
 
-![](images/repro-3.png){fig-align='center' height=300}
+![](images/repro-3.png){fig-align="center" height="300"}
 
 ::: {.callout-important title="Gosh! ☠️"}
 A 2019 paper found just 24% of 800k Jupyter notebooks on GitHub could be rerun, and only 4% reproduced the same results!
@@ -110,23 +109,23 @@ A 2019 paper found just 24% of 800k Jupyter notebooks on GitHub could be rerun, 
 
 ## /motivation/reproducibility-crisis
 
-![](images/repro-4.png){fig-align='center' height=400}
+![](images/repro-4.png){fig-align="center" height="400"}
 
 ::: {.callout-important title="Say it isn't so! 🤯"}
 A 2024 study on code reproducibility in economics attempted to reproduce 67 economics papers and found that only about 50% were reproducible, even with author assistance and mandatory code-sharing policies at journals!
 :::
 
+<!-- ## /reproducibility -->
+
+<!-- How do we *define* end to end reproducibility? -->
+
+<!-- <br><br> -->
+
+<!-- *Given a set of inputs, we expect stable, identical outputs* -->
+
 ## /reproducibility
 
-How do we _define_ end to end reproducibility?
-
-<br><br>
-
-_Given a set of inputs, we expect stable, identical outputs_
-
-## /reproducibility
-
-How do we _ensure_ end to end reproducibility?
+How do we *ensure* end to end reproducibility?
 
 ```{mermaid}
 mindmap
@@ -148,7 +147,6 @@ mindmap
       [Blob storage]
       [Archives]
 ```
-
 
 ## /{targets}/what-is-it?
 
@@ -175,32 +173,30 @@ It'll help you go from here...
 
 To here...
 
-![](images/to.png){fig-align='center'}
-
+![](images/to.png){fig-align="center"}
 
 ## /{targets}/what-we'll-cover
 
 <br>
 
-The workshop is structured to build your skills step-by-step, from foundational concepts to _some_ advanced features:
+The workshop is structured to build your skills step-by-step, from foundational concepts to *some* advanced features:
 
 <br>
 
-<div class="agenda-workshop">
-
+::: agenda-workshop
 ### Fundamentals
 
-1. **01-basics** 
-2. **02-functions** 
-3. **03-files** 
+-  **01-basics**
+-  **02-functions**
+-  **03-files**
 
 ### Advanced Topics
 
-4. **04-parallel**
-5. **05-dynamic_branching** 
-6. **06-database**  
-7. **07-full_example** 
-</div>
+-  **04-parallel**
+-  **05-dynamic_branching**
+-  **06-database**
+-  **07-full_example**
+:::
 
 # /lets::code()
 
@@ -209,20 +205,18 @@ The workshop is structured to build your skills step-by-step, from foundational 
 <br>
 
 ::: incremental
+**We learned:**
 
-**We learned:**  
-
-  - What `{targets}` is and why reproducibility matters  
-  - How to build and modularize pipelines  
-  - Managing files, Quarto reports, and databases  
-  - Using parallel computing and dynamic branching  
-  - Bringing it all together in a full example
+-   What `{targets}` is and why reproducibility matters\
+-   How to build and modularize pipelines\
+-   Managing files, Quarto reports, and databases\
+-   Using parallel computing and dynamic branching\
+-   Bringing it all together in a full example
 :::
 
 ## /further-reading
 
-
-_We just scratched the surface..._
+*We just scratched the surface...*
 
 ::::: columns
 ::: {.column width="50%"}
@@ -232,25 +226,18 @@ _We just scratched the surface..._
 ::: {.column width="50%"}
 ![The documentation](images/targets-docs.png){width="700," fig-align="center"}
 :::
-
 :::::
 
-:::{.aside}
-_Handling packages, advanced tarchetypes, cloud storage, remote distributed computation, performance testing & profiling, & much more..._
+::: aside
+*Handling packages, advanced tarchetypes, cloud storage, remote distributed computation, performance testing & profiling, & much more...*
 :::
-
 
 ## /lets-make-data-science-reproducible!
 
 <br>
 
-![](images/ihope.png){fig-align='center' height=500}
-
+![](images/ihope.png){fig-align="center" height="500"}
 
 # 🙏
 
-<br>
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"> <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/> `rsangole` </svg>
-<br>
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"> <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/> `rahulsangole` </svg>
-
+<br> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"> <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/> `rsangole` </svg> <br> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"> <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/> `rahulsangole` </svg>

@@ -172,7 +172,7 @@
     "href": "presentation.html#targetswhat-well-cover",
     "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/{targets}/what-we’ll-cover",
-    "text": "/{targets}/what-we’ll-cover\n\nThe workshop is structured to build your skills step-by-step, from foundational concepts to some advanced features:\n\n\nFundamentals\n\n01-basics\n02-functions\n03-files\n\nAdvanced Topics\n\n04-parallel\n05-dynamic_branching\n06-database\n\n07-full_example"
+    "text": "/{targets}/what-we’ll-cover\n\nThe workshop is structured to build your skills step-by-step, from foundational concepts to some advanced features:\n\n\nFundamentals\n\n01-basics\n02-functions\n03-files\n\nAdvanced Topics\n\n04-parallel\n05-dynamic_branching\n06-database\n07-full_example"
   },
   {
     "objectID": "presentation.html#letscode",
@@ -214,7 +214,7 @@
     "href": "presentation.html#reproducibility",
     "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/reproducibility",
-    "text": "/reproducibility\nHow do we define end to end reproducibility?\n\nGiven a set of inputs, we expect stable, identical outputs"
+    "text": "/reproducibility\nHow do we ensure end to end reproducibility?\n\n\n\n\n\nmindmap\n  root)Reproducibility(\n    3-Code\n      [Version]\n        [Github]\n      [Execution]\n        ))targets((\n    2-Environment\n      🐳 [Docker]\n        [OS]\n        [Libraries]\n        [Environment]\n        [R Packages]\n        [Py Packages]\n    1-Data\n      [Databases]\n      [Blob storage]\n      [Archives]"
   },
   {
     "objectID": "presentation.html#reproducibility-1",
@@ -222,5 +222,12 @@
     "title": "The 💪 of {targets} for  Reproducible Data Science",
     "section": "/reproducibility",
     "text": "/reproducibility\nHow do we ensure end to end reproducibility?\n\n\n\n\n\nmindmap\n  root)Reproducibility(\n    3-Code\n      [Version]\n        [Github]\n      [Execution]\n        ))targets((\n    2-Environment\n      🐳 [Docker]\n        [OS]\n        [Libraries]\n        [Environment]\n        [R Packages]\n        [Py Packages]\n    1-Data\n      [Databases]\n      [Blob storage]\n      [Archives]"
+  },
+  {
+    "objectID": "presentation.html#motivationreproducibility-crisis-4",
+    "href": "presentation.html#motivationreproducibility-crisis-4",
+    "title": "The 💪 of {targets} for  Reproducible Data Science",
+    "section": "/motivation/reproducibility-crisis",
+    "text": "/motivation/reproducibility-crisis\n\n\n\n\n\n\n\n\n\n\n\n\nSay it isn’t so! 🤯\n\n\nA 2024 study on code reproducibility in economics attempted to reproduce 67 economics papers and found that only about 50% were reproducible, even with author assistance and mandatory code-sharing policies at journals!"
   }
 ]
