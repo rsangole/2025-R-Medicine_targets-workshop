@@ -71,5 +71,6 @@ list(
   )
 
   # Exercise ----
+  # Don't forget to add a "," after the last target ^^
   # Your code here....
 )

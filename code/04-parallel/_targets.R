@@ -69,5 +69,6 @@ list(
   tar_target(mod_lm_coeffs5, broom::tidy(mod_lm5))
 
   # Exercise ----
+  # Don't forget to add a "," after the last target ^^
   # Your code here....
 )

@@ -77,5 +77,6 @@ list(
   tar_target(mod_lm_summary, summary(mod_lm))
 
   # Exercise ----
+  # Don't forget to add a "," after the last target ^^
   # Your code here....
 )

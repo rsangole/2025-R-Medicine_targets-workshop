@@ -1,5 +1,7 @@
+# Libraries ----
 library(targets)
 
+# Settings ----
 tar_option_set(
   format = "qs",
   packages = c(
@@ -13,6 +15,7 @@ tar_option_set(
   )
 )
 
+# Targets ----
 list(
   tar_target(
     tbl_from_database,
@@ -39,4 +42,8 @@ list(
     },
     age = as.difftime(1, units = "mins")
   )
+
+  # Exercise ----
+  # Don't forget to add a "," after the last target ^^
+  # Your code here....
 )

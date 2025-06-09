@@ -5,7 +5,22 @@ pipe_models <- list(
   tar_target(prep_recipe, create_recipe(clean_data)),
 
   # Model definitions
-  tar_target(models, define_models()),
+  tar_target(
+    models,
+    list(
+      rf = rand_forest(trees = 100, mode = "classification") |>
+        set_engine("ranger", importance = "impurity"),
+      rf500 = rand_forest(trees = 500, mode = "classification") |>
+        set_engine("ranger", importance = "impurity")
+      # logreg_p01 = multinom_reg(penalty = 0.1, mode = "classification") |>
+      #   set_engine("glmnet"),
+      # logreg_p05 = multinom_reg(penalty = 0.5, mode = "classification") |>
+      #   set_engine("glmnet"),
+      # nnet_spec = mlp(epochs = 1000, hidden_units = 10, penalty = 0.01, learn_rate = 0.1) %>%
+      #   set_engine("brulee", validation = 0) %>%
+      #   set_mode("classification")
+    )
+  ),
 
   # Train models (dynamic branching)
   tar_target(
@@ -22,8 +37,8 @@ pipe_models <- list(
   # Evaluate models
   tar_target(
     model_metrics,
-    evaluate_model(trained_model, test_data),
-    pattern = map(trained_model)
+    evaluate_model(models, trained_model, test_data),
+    pattern = map(models, trained_model)
   ),
 
   # Confusion matrices

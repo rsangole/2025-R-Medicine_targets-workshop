@@ -1,11 +1,14 @@
+# Libraries ----
 library(targets)
 library(tarchetypes)
 library(crew)
 library(tidymodels)
 
+# Source ----
 lapply(fs::dir_ls("pipelines/", glob = "*.R"), tar_source)
 lapply(fs::dir_ls("R/", glob = "*.R"), tar_source)
 
+# Settings ----
 tar_option_set(
   controller = crew_controller_local(workers = 6),
   format = "qs",
@@ -21,6 +24,7 @@ tar_option_set(
   )
 )
 
+# Targets ----
 list(
   pipe_data,
   pipe_models,

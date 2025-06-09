@@ -17,10 +17,10 @@ tar_read(model_metrics)
 tar_read(conf_plot)
 ```
 
-## Feature Importance (Random Forest)
+## Feature Importance (Random Forest only)
 ```{r}
 tar_read(importance_plot)
 ```
 
 ## Conclusion
-The random forest model typically outperforms logistic regression due to its ability to capture non-linear relationships. Key predictors include `carat`, `color`, and `clarity`.
+The random forest model typically outperforms logistic regression due to its ability to capture non-linear relationships.

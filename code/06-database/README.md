@@ -8,16 +8,19 @@ This section covers integrating databases into your pipeline, both for reading a
 - Write target results back to the database.
 - Ensure pipeline reruns only when relevant database tables change.
 
+**Additional new concepts introduced:**
+- target "triggers" or "cues" (rules that decide whether a target is up to date)
+- Age based trigger using: `tarchetypes::tar_age`
+
+
 # Exercise
 
-- Add a new target that reads only rows where `Age > 40` from the SQLite database.
+*Read from the database within the pipeline.*
+
+- Add a new target `tbl_age_gt_40` that reads only rows where `Age > 40` from the SQLite database.
 - Use `dplyr::filter()` inside the target code.
 - Run the pipeline and inspect the filtered data.
 
-**Challenge:**  
+*Write to the database within the pipeline.*
 
-*Write and read from the database within the pipeline.*
-
-- Add a target that writes a summary table (e.g., mean BMI by gender) to a new table in the SQLite database.
-- Add another target that reads this summary table back into R and plots the results.
-- Ensure the pipeline only re-runs the read if the database table changes.
+- Write `tbl_age_gt_40` to a new table called `DATA_GT_AGE_40` in the SQLite database
