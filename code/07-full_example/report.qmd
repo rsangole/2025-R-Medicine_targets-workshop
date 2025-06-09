@@ -1,0 +1,26 @@
+---
+title: "Diamond Cut Prediction Report"
+format: html
+---
+
+## Overview
+This report summarizes the machine learning pipeline for predicting diamond `cut` using the `ggplot2::diamonds` dataset. The pipeline is built with `{targets}` for reproducibility.
+
+## Model Performance
+```{r}
+library(targets)
+tar_read(model_metrics)
+```
+
+## Confusion Matrices
+```{r}
+tar_read(conf_plot)
+```
+
+## Feature Importance (Random Forest)
+```{r}
+tar_read(importance_plot)
+```
+
+## Conclusion
+The random forest model typically outperforms logistic regression due to its ability to capture non-linear relationships. Key predictors include `carat`, `color`, and `clarity`.
