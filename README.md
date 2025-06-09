@@ -1,3 +1,5 @@
+![Static Badge](https://img.shields.io/badge/Workshop%20-%202025%20R%2FMedicine%20Conference%20-%20darkgreen) ![Static Badge](https://img.shields.io/badge/Topic%20-%20{targets}%20-%20maroon)
+
 # The power of `{targets}` for reproducible data science
 
 [_2025 R/Medicine Conference_](https://rconsortium.github.io/RMedicine_website/)
@@ -18,8 +20,6 @@ The `{targets}` package provides a comprehensive framework for pipeline manageme
 - **Leverage** parallel computing and dynamic branching for scalable workflows.
 - **Integrate** databases into your pipeline for robust data management.
 - **Visualize** and debug pipelines using built-in tools.
-
-
 
 ## Agenda
 
@@ -44,12 +44,12 @@ The `{targets}` package provides a comprehensive framework for pipeline manageme
     - `brew install mbedtls`
     - `brew install cmake`
 
-
 ## Workshop Sequence
 
 The workshop is structured to build your skills step-by-step, from foundational concepts to advanced features:
 
 ### Fundamentals
+
 1. **01-basics**  
    *Get started with the core concepts of `{targets}` and build your first pipeline.*
 
@@ -58,9 +58,6 @@ The workshop is structured to build your skills step-by-step, from foundational 
 
 3. **03-files**  
    *Handle file inputs and outputs, and integrate Quarto documents for automated reporting.*
-
-
----
 
 ### Advanced Topics
 
@@ -75,7 +72,6 @@ The workshop is structured to build your skills step-by-step, from foundational 
 
 7. **07-full_example**  
    *A comprehensive example that brings together all previous concepts, including parameterized reporting and advanced workflow management.*
-
 
 ---
 
