@@ -1,23 +1,27 @@
+# Libraries ----
 library(targets)
 library(crew)
 
+# Source ----
 tar_source("functions.R")
 
+# Settings ----
 tar_option_set(
   controller = crew_controller_local(workers = 4),
   format = "qs",
   packages = c("dplyr", "janitor", "plotly", "NHANES")
 )
 
+# Targets ----
 list(
-  # Full dataset
+  # * Input data ----
   tar_target(
     tbl_NHANES,
     NHANES::NHANES |>
       fn_clean()
   ),
 
-  # Models
+  # * Models ----
 
   ## Model 1
   tar_target(
@@ -63,4 +67,7 @@ list(
     )
   ),
   tar_target(mod_lm_coeffs5, broom::tidy(mod_lm5))
+
+  # Exercise ----
+  # Your code here....
 )

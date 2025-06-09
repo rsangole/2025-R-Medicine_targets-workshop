@@ -5,7 +5,7 @@ fn_clean <- function(tbl) {
 }
 
 fn_lm_mod <- function(tbl, formula) {
-  Sys.sleep(5)
+  Sys.sleep(10)
 
   lm(formula, tbl)
 }
