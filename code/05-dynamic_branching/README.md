@@ -22,4 +22,5 @@ _Strech goal_
 
 - Try creating dynamic branches using `cross` mapping
 - Experiment with parameter `iteration = "list"`.
-    - What's the impact of removing that setting for `tbl_list_home_edu`, when we `tar_read(tbl_list_home_edu)`?
+    - What's the impact of removing that setting for `tbl_list_home_edu`, 
+      when we `tar_read(tbl_list_home_edu)`?

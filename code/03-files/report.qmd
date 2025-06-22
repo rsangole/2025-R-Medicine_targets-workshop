@@ -1,0 +1,10 @@
+---
+title: "03-files"
+format: html
+params:
+  tbl_coeff: "default"
+---
+
+```{r}
+print(params$tbl_coeff)
+```

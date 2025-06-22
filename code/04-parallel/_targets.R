@@ -48,7 +48,7 @@ list(
       formula = formula(bmi ~ age + bp_sys1)
     )
   ),
-  tar_target(mod_lm_coeffs3, broom::tidy(mod_lm3)),
+  tar_target(mod_lm_coeffs3, broom::tidy(mod_lm3))
 
   ## Model 4
   tar_target(
@@ -58,8 +58,7 @@ list(
     )
   ),
   tar_target(mod_lm_coeffs4, broom::tidy(mod_lm4)),
-
-  ## Model 5
+   ## Model 5
   tar_target(
     mod_lm5,
     fn_lm_mod(tbl_NHANES,

@@ -6,6 +6,25 @@ library(janitor)
 library(plotly)
 library(NHANES)
 
+# # Before
+# tbl_NHANES_subset <- NHANES |>
+#   select(
+#     ID,
+#     SurveyYr
+#   )
+#
+# # Target
+# tar_target(
+#   name = tbl_NHANES_subset,
+#   command = {
+#     NHANES |>
+#       select(
+#         ID,
+#         SurveyYr
+#       )
+#   }
+# )
+
 list(
   # Full dataset ----
   tar_target(

@@ -7,7 +7,7 @@ tar_source("functions.R")
 
 # Settings ----
 tar_option_set(
-  format = "rds", # qs
+  format = "rds",
   packages = c(
     "dplyr", "janitor",
     "plotly", "NHANES"
@@ -27,14 +27,18 @@ list(
   ),
   tar_target(
     tbl_NHANES,
-    readr::read_csv(local_file)
+    {
+      readr::read_csv(local_file)
+    }
   ),
 
   # * Subset ----
   tar_target(
     tbl_NHANES_subset,
-    tbl_NHANES |>
-      select(one_of(fn_cols()))
+    {
+      tbl_NHANES |>
+        select(one_of(fn_cols()))
+    }
   ),
 
   # * Cleanup ----
@@ -73,4 +77,5 @@ list(
   # Exercise ----
   # Don't forget to add a "," after the last target ^^
   # Your code here....
+
 )

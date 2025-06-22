@@ -17,6 +17,7 @@ tar_progress()
 
 # Read the output of a target
 tar_read(tbl_clean)
+tar_read(plot_scatter)
 
 # Load target values into your R session
 tar_load(tbl_clean)

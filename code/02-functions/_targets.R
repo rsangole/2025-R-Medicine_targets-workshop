@@ -43,6 +43,16 @@ fn_lm_mod <- function(tbl) {
 
   lm(bp_dia_ave ~ bp_sys_ave + gender + age, tbl_2)
 }
+fn_plot_bar <- function(tbl) {
+  # comments
+
+  plot_ly(tbl,
+    x = ~gender,
+    y = ~n,
+    color = ~education
+  ) |>
+    add_bars()
+}
 
 # Targets list ----
 list(
@@ -74,9 +84,19 @@ list(
 
   # Model ----
   tar_target(mod_lm, fn_lm_mod(tbl_clean)),
-  tar_target(mod_lm_summary, summary(mod_lm))
+  tar_target(mod_lm_summary, summary(mod_lm)),
 
   # Exercise ----
   # Don't forget to add a "," after the last target ^^
   # Your code here....
+
+  tar_target(
+    tbl_counts,
+    tbl_clean |>
+      summarise(
+        n = n(),
+        .by = c("gender", "education")
+      )
+  ),
+  tar_target(plot_bar, fn_plot_bar(tbl_counts))
 )
